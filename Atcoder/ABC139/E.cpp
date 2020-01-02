@@ -66,20 +66,24 @@ int main(){
     vector<vector<int>> v(n*(n-1));
     map<P,int> key;
     int t = 1;
-    TopologicalSort T(n*(n-1)+1);
+    TopologicalSort T(n*(n-1)/2);
     FOR(i,0,n){
         vector<P> tmp;
         FOR(j,0,n-1){
             int in;
             cin>>in;            
             tmp.push_back(sortP(i, in-1));
-            key[sortP(i,in-1)] = t;
-            t++;
+            if(key[sortP(i,in-1)] == 0){
+              key[sortP(i,in-1)] = t;
+              t++;
+            }
+//            cout<<"key = "<<sortP(i,in-1).first<<" "<<sortP(i,in-1).second<<" t = "<<t<<endl;
         }
 
         FOR(j,1,n-1){
             int from = key[tmp[j-1]];
             int to = key[tmp[j]];
+//            cout<<"f - > t"<<from<<" "<<to<<endl;
             v[from].push_back(to);
             T.addEdge(from,to);
         }
