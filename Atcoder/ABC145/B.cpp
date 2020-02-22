@@ -17,4 +17,16 @@ using namespace std;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    ll n;
+    cin>>n;
+    string s;
+    cin>>s;
+    string res = "Yes";
+    if(n%2!=0) res = "No";
+    else{
+        FOR(i,0,n/2){
+            if(s[i] != s[i + n/2]) res = "No";
+        }
+    }
+    cout<<res<<endl;
 }

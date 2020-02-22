@@ -17,4 +17,14 @@ using namespace std;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    ll h,n;
+    cin>>h>>n;
+    ll x = 0;
+    FOR(i,0,n){
+        ll in;
+        cin>>in;
+        x += in;
+    }
+    if(x>=h)cout<<"Yes"<<endl;
+    else cout<<"No"<<endl;
 }

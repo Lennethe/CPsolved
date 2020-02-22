@@ -17,4 +17,14 @@ using namespace std;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    ll h;
+    cin>>h;
+    ll ans = 0;
+    ll tmp = 1;
+    while(h != 0){
+        ans += tmp;
+        tmp *= 2;
+        h/=2;
+    }
+    cout<<ans<<endl;
 }

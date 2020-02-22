@@ -1,8 +1,8 @@
 //#define _GLIBCXX_DEBUG
 #include <iostream>
 #include <bits/stdc++.h>
-
-
+    
+    
 using namespace std;
 #define ll long long
 #define ld long double
@@ -13,7 +13,7 @@ using namespace std;
 #define sortAl(v) sort(v.begin(),v.end())
 #define sortAlr(v) sort(v.begin(),v.end()); reverse(v.begin(),v.end())
 #define cout(n) cout<<fixed<<setprecision(n)
-
+    
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);

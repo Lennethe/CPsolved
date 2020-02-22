@@ -17,4 +17,11 @@ using namespace std;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    ll n;
+    cin>>n;
+    int res = 1;
+    string s;
+    cin>>s;
+    FOR(i,1,n)if(s[i-1] != s[i])res++;
+    cout<<res<<endl;
 }

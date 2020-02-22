@@ -17,4 +17,7 @@ using namespace std;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    ll h,n;
+    cin>>h>>n;
+    cout<<(h+n-1)/n<<endl;
 }

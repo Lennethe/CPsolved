@@ -17,4 +17,7 @@ using namespace std;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    ll a,b,k;
+    cin>>a>>b>>k;
+    cout<<max(a-k,(ll)0)<<" "<<max((ll)0,b-max((ll)0,(k-a)))<<endl;
 }

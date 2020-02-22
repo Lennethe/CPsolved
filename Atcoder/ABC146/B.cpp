@@ -17,4 +17,18 @@ using namespace std;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    ll n;
+    cin>>n;
+    string s;
+    cin>>s;
+    vector<char> v(70);
+    FOR(i,0,70){
+        v[i] = (i%26+'A');
+    }
+
+    FOR(i,0,s.size()){
+        cout<<v[s[i]-'A'+n];
+    }
+    cout<<endl;
+
 }

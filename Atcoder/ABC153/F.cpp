@@ -17,4 +17,29 @@ using namespace std;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    ll n,d,a;
+    cin>>n>>d>>a;
+    vector<P> x_h(n+1);
+    FOR(i,0,n){
+        cin>>x_h[i].first>>x_h[i].second;
+        x_h[i].second = (x_h[i].second+a-1)/a;
+    }
+    x_h[n] = P(1e12, 0);
+    sortAl(x_h);
+    ll ans = 0;
+    ll l = 0;
+    vector<ll> res(n);
+    ll tmp = 0;
+    FOR(i,0,n){
+        while(x_h[l].first < x_h[i].first - 2*d){
+            tmp -= res[l];
+            l++;
+        }
+        ll dmg = max(x_h[i].second - tmp, (ll)0);
+        res[i] = dmg;
+        tmp += dmg;
+        ans += dmg;
+    }
+    cout<<ans<<endl;
+
 }

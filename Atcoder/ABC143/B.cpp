@@ -17,4 +17,11 @@ using namespace std;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    int n;
+    cin>>n;
+    vector<int> v(n);
+    FOR(i,0,n)cin>>v[i];
+    ll ans = 0;
+    FOR(i,0,n)FOR(j,i+1,n) ans += v[i]*v[j];
+    cout<<ans<<endl;
 }

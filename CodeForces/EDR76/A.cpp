@@ -17,4 +17,14 @@ using namespace std;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    ll t;
+    cin>>t;
+    FOR(i,0,t){
+        ll n,x,a,b;
+        cin>>n>>x>>a>>b;
+        ll t_a = min(a,b);
+        ll t_b = max(a,b);
+        ll dis = t_a - 1 + n - t_b;
+        cout<<t_b - t_a + min(dis, x)<<endl;
+    }
 }

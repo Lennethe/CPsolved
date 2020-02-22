@@ -17,4 +17,24 @@ using namespace std;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    ll t;
+    cin>>t;
+    FOR(i,0,t){
+        ll n;
+        cin>>n;
+        vector<ll> v(2e5+1);
+        FOR(j,0,n)cin>>v[j];
+        ll ans = n+1;
+        vector<ll> key(2e5+1);
+        map<ll,ll> mp;
+        FOR(j,0,n){
+            mp[v[j]]++;
+            if(mp[v[j]]>1){
+                ans = min(ans, j - key[v[j]]);
+            }
+            key[v[j]] = j;
+        }
+        if(ans == n+1) cout<<-1<<endl;
+        else cout<<ans+1<<endl;
+    }
 }

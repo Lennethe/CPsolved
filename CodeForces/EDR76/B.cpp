@@ -17,4 +17,17 @@ using namespace std;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    ll n;
+    cin>>n;
+    FOR(i,0,n){
+        ll a,b;
+        cin>>a>>b;
+        if(a==1){
+            if(b==1)cout<<"YES"<<endl;
+            else cout<<"NO"<<endl;
+        }else if(a <= 3){
+            if(b<=3)cout<<"YES"<<endl;
+            else cout<<"NO"<<endl;
+        }else cout<<"YES"<<endl;
+    }
 }

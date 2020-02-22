@@ -17,4 +17,14 @@ using namespace std;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    ll n,k;
+    cin>>n>>k;
+    vector<ll> v(n);
+    FOR(i,0,n)cin>>v[i];
+    sortAl(v);
+    ll ans = 0;
+    FOR(i,0,n-k){
+        ans += v[i];
+    }
+    cout<<ans<<endl;
 }

@@ -17,4 +17,23 @@ using namespace std;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    ll h,n;
+    cin>>h>>n;
+    vector<P> v(n);
+    FOR(i,0,n)cin>>v[i].first>>v[i].second;
+    vector<vector<ll>> dp(n+1,vector<ll>(h+1,1e9));
+    FOR(i,0,n+1)dp[i][0] = 0;
+    //FOR(i,0,h)dp[0][i] = 0;
+
+    FOR(i,1,n+1){
+        FOR(j,1,h+1){
+            ll dmg = v[i-1].first;
+            ll mp = v[i-1].second;
+            ll pre = max((ll)0, j-dmg);
+            dp[i][j] = min(dp[i-1][j], dp[i][pre] + mp);
+        }
+    }
+
+    cout<<dp[n][h]<<endl;
+
 }

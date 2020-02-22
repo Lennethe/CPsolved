@@ -17,4 +17,29 @@ using namespace std;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    string s;
+    cin>>s;
+    ll ans=0;
+    ll x = 0;
+    FOR(i,0,s.size()){
+        ans += min(s[i]-'0', 10 - s[i] + '0');
+        if(s[i]-'0'<=4){
+            if(x==0)x=2;
+            if(x==1 && s[i-1] == '5'){
+                x = 2;
+            }
+            ans += 2-x;
+            x = 0;
+        }
+        else{
+            x++;
+        }
+
+    }
+    if(x==0)x=2;
+    ans += 2-x;
+    x = 0;
+
+    cout<<ans<<endl;
+
 }
