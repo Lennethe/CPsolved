@@ -30,6 +30,7 @@ T invmod(T a, T m){
   return x;
 }
 
+// O(1) ただし、n<=2e5, k<=2e5
 long long comb(long long n, long long k){
   if(n <= k || n<=0 || k<=0) return 1;
   long long x = func[n-k]; 
