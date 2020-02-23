@@ -17,4 +17,7 @@ using namespace std;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    ll n,r;
+    cin>>n>>r;
+    cout<<r + 100*(max((ll)0,10-n))<<endl;
 }
