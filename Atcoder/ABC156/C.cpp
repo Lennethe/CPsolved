@@ -17,4 +17,19 @@ using namespace std;
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
+    ll n;
+    cin>>n;
+    vector<ll> v(n);
+    FOR(i,0,n)cin>>v[i];
+    ll tmp = 1e9;
+    FOR(i,0,100){
+        ll a = 0;
+        FOR(j,0,n){
+            a += (v[j]-i)*(v[j]-i);
+        }
+        if(a<=tmp){
+            tmp = a;
+        }
+    }
+    cout<<tmp<<endl;
 }
