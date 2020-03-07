@@ -13,6 +13,7 @@ using namespace std;
 #define sortAl(v) sort(v.begin(),v.end())
 #define sortAlr(v) sort(v.begin(),v.end()); reverse(v.begin(),v.end())
 #define cout(n) cout<<fixed<<setprecision(n)
+#define dout(n) cout<<# n<<" = "<<n<<endl;
     
 int main(){
     cin.tie(0);
