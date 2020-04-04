@@ -6,7 +6,6 @@
 // => aとbの和の組み合わせの数
 
 const double pi = std::acos(-1.0);
-
 using type = std::complex<long double>;
 
 std::vector<type> fft(std::vector<type> v, bool inv = false) {
