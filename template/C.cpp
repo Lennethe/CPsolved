@@ -14,7 +14,9 @@ using namespace std;
 #define sortAlr(v) sort(v.begin(),v.end()); reverse(v.begin(),v.end())
 #define cout(n) cout<<fixed<<setprecision(n)
 #define dout(n) cout<<# n<<" = "<<n<<endl;
-    
+#define v1out(v) FOR(i,0,v.size()){cout<<v[i]; if(i!=(ll)v.size()-1)cout<<" ";else cout<<endl; }
+#define v2out(v) FOR(i,0,v.size())v1out(v[i]);
+
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
