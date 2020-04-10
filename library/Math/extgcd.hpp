@@ -20,3 +20,7 @@ T extgcd(T a, T b, T &x, T &y) {
   }
   return d;
 }
+
+#define ll long long
+ll gcd(ll a, ll b) { return b ? gcd(b, a%b) : a; }	//最大公約数(Greatest Common Divisor)
+ll lcm(ll a, ll b) { return a/gcd(a,b)*b; }			//最小公倍数(Least Common Multiple)
