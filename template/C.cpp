@@ -10,11 +10,12 @@ using namespace std;
 #define FOR(i,n,m) for(ll i=n; i<(ll)m;i++)
 #define FORr(i,m,n) for(ll i=n; i>=(ll)m; i--)
 #define FORm(i,m) for(auto i=m.begin();i!=m.end();i++)
+#define REV(v) reverse(v.begin(),v.end())
 #define sortAl(v) sort(v.begin(),v.end())
 #define sortAlr(v) sort(v.begin(),v.end()); reverse(v.begin(),v.end())
 #define cout(n) cout<<fixed<<setprecision(n)
 #define dout(n) cout<<# n<<" = "<<n<<endl;
-#define v1out(v) FOR(i,0,v.size()){cout<<v[i]; if(i!=(ll)v.size()-1)cout<<" ";else cout<<endl; }
+#define v1out(v) FOR(j,0,v.size()){cout<<v[j]; if(j!=(ll)v.size()-1)cout<<" ";else cout<<endl; }
 #define v2out(v) FOR(i,0,v.size())v1out(v[i]);
 
 int main(){
