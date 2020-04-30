@@ -4,3 +4,4 @@ ProconLibrary/
 /**/*.plist
 /Intern2020
 **.out
+debug.cpp
